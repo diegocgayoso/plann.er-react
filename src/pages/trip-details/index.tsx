@@ -1,5 +1,5 @@
 import { Plus } from "lucide-react";
-import { FormEvent, useState } from "react";
+import { useState } from "react";
 import { CreateActivityModal } from "./create-activity-modal";
 import { ImportantLinks } from "./important-links";
 import { ActiveMembers } from "./active-members";
@@ -19,21 +19,11 @@ export function TripDetails() {
   function closeActivityModal() {
     setIsCreateActivityModalOpen(false);
   }
-  // function openLinkModal() {
-  //   setIsCreateLinkModalOpen(true);
-  // }
+  function openLinkModal() {
+    setIsCreateLinkModalOpen(true);
+  }
   function closeLinkModal() {
     setIsCreateLinkModalOpen(false);
-  }
-  // function addNewActivity(event: FormEvent<HTMLFormElement>) {
-  //   event.preventDefault();
-  //   const data = new FormData(event.currentTarget);
-  //   console.log("Activity :" + data);
-  // }
-  function addNewLink(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log(data);
   }
 
   return (
@@ -55,7 +45,7 @@ export function TripDetails() {
         {/* Aside */}
         <div className="w-80 space-y-6">
           {/* Links */}
-          <ImportantLinks />
+          <ImportantLinks openCreateLinkModal={openLinkModal} />
 
           <div className="w-full h-px bg-zinc-800"></div>
           {/* Members */}
@@ -71,7 +61,6 @@ export function TripDetails() {
       {isCreateLinkModalOpen && (
         <CreateLinkModal
           closeCreateLinkModal={closeLinkModal}
-          createLink={addNewLink}
         />
       )}
     </div>

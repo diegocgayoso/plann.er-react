@@ -40,7 +40,6 @@ export function CreateTrip() {
   function closeConfirmTripModal() {
     setConfirmTripModalOpen(false);
   }
-
   function addNewEmailToInvite(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
@@ -57,14 +56,12 @@ export function CreateTrip() {
     setEmailsToInvite([...emailsToInvite, email]);
     event.currentTarget.reset();
   }
-
   function removeEmails(emailToRemove: string) {
     const newEmailList = emailsToInvite.filter(
       (email) => email !== emailToRemove
     );
     setEmailsToInvite(newEmailList);
   }
-
   async function createTrip(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
 

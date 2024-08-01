@@ -24,7 +24,6 @@ export function ActiveMembers() {
   return (
     <div className="space-y-6">
       <h2 className="text-xl font-semibold text-zinc-50">Membros</h2>
-
       {participants.map((participant, index) => {
         return (
           <div key={participant.id} className="space-y-5">

@@ -38,7 +38,6 @@ export function CreateActivityModal({
             Todos convidados podem visualizar as atividades.
           </small>
         </div>
-        {/* <div className="flex flex-wrap gap-2"></div> */}
         <form onSubmit={createActivity} className="space-y-2">
           <div className="h-14 px-4 bg-zinc-950 border border-zinc-800 rounded-lg flex items-center gap-2">
             <Tag className="size-5 text-zinc-400" />
@@ -58,18 +57,8 @@ export function CreateActivityModal({
                 className="bg-transparent placeholder-zinc-400 outline-none flex-1"
               />
             </div>
-            {/* <div className="h-14 w-36 px-4 bg-zinc-950 border border-zinc-800 rounded-lg flex items-center gap-2">
-              <Clock className="size-5 text-zinc-400" />
-              <input
-                type="time"
-                name="hour_activity"
-                placeholder="Que horas?"
-                className="bg-transparent placeholder-zinc-400 outline-none flex-1"
-              />
-            </div> */}
           </div>
           <Button type="submit" variant="primary" size="full">
-            {/* onClick={closeFieldMembers} */}
             Salvar rolê
           </Button>
         </form>
